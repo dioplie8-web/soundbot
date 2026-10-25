@@ -12,7 +12,9 @@ AUDIO_FILES = {
 
     "Утонул" : "https://files.catbox.moe/8eu2x3.mp3",
     "Тимур" : "https://files.catbox.moe/nea7vv.mp3",
-    "Сюда" : "https://files.catbox.moe/gkt7gu.mp3"
+    "Сюда" : "https://files.catbox.moe/gkt7gu.mp3",
+    "Собака": "https://files.catbox.moe/0c5k5i.mp3",
+    "Сумасшедший": "https://files.catbox.moe/p7o8g2.mp3"
 
     }
 
