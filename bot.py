@@ -1,4 +1,7 @@
 import asyncio
+import os
+import threading
+from http.server import BaseHTTPRequestHandler
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import InlineQueryResultAudio
 
