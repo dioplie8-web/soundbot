@@ -32,8 +32,20 @@ async def inline_sounds(query: types.InlineQuery):
         )
     await query.answer(results=results, cache_time=1)
 
+    class Handler(BaseHTTPRequestHandler):
+     def do_GET(self):
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b"Bot is running")
+
+def run_server():
+    port = int(os.environ.get("PORT", 8080))
+    server = HTTPServer(("0.0.0.0", port), Handler)
+    server.serve_forever()
+
 async def main():
-    print("Бот запущен! Ссылка вставлена, окошко должно работать.")
+    threading.Thread(target=run_server, daemon=True).start()
+    print("Бот запущен!")
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
